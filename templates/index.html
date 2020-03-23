@@ -23,6 +23,8 @@
 <ul>
     {% for key in keys.keys %}
         <li>{{ key }}</li>
+    {%  empty %}
+        <li>空，无</li>
     {% endfor %}
 </ul>
 

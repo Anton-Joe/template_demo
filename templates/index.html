@@ -64,5 +64,10 @@
 {% with a=testwith %}
     <p>{{ a }}</p>
 {% endwith %}
+
+<p>-------接下来测试url标签的使用-------</p>
+<p><a href="{% url 'movie' %}">跳转到电影首页</a></p>
+<p><a href="{% url 'movie_detail' movie_id='2' category_id='2' %}">跳转到电影详情页，采用明传参数的方式</a></p>
+<p><a href="{% url 'movie_detail_2' %}?movie_id=2">跳转到电影详情页，采用明传参数的方式</a></p>
 </body>
 </html>

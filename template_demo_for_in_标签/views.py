@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.http import HttpResponse
 
 context = {
     'Books': [
@@ -28,3 +28,17 @@ context = {
 
 def index(request):
     return render(request, 'index.html', context=context)
+
+
+def movie(request):
+    return HttpResponse('电影首页')
+
+
+def movie_detail(request, movie_id, category_id):
+    text = "您的电影id是{x}, 电影分类是{c}".format(x=movie_id,c=category_id)
+    return HttpResponse(text)
+
+
+def movice_detail_2(request):
+    id = request.GET.get('movie_id')
+    return HttpResponse("您的电影id是{x}".format(x=id))

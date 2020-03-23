@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>你好，世界，这是template的for in 标签练习</title>
+</head>
+<body>
+<t1>你好，世界，这是template的for in 标签练习</t1>
+
+<ul>
+    {% for book in Books %}
+        <li>{{ book }}</li>
+    {% endfor %}
+</ul>
+
+<ul>
+{% for book in Books reversed %}
+    <li>{{ book }}</li>
+{% endfor %}
+</ul>
+
+
+<ul>
+    {% for key in keys.keys %}
+        <li>{{ key }}</li>
+    {% endfor %}
+</ul>
+
+<ul>
+    {% for value in keys.values %}
+        <li>{{ value }}</li>
+    {% endfor %}
+</ul>
+
+<ul>
+    {% for key, value in keys.items %}
+        <li>{{ key }} + {{ value }}</li>
+    {% endfor %}
+</ul>
+
+
+<table >
+    <thead>
+        <tr>
+            <td>序号</td>
+            <td>书名</td>
+            <td>作者</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for Book in Books_Info %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ Book.book_name }}</td>
+                <td>{{ Book.author }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+
+</body>
+</html>

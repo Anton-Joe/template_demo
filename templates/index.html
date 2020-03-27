@@ -69,5 +69,15 @@
 <p><a href="{% url 'movie' %}">跳转到电影首页</a></p>
 <p><a href="{% url 'movie_detail' movie_id='2' category_id='2' %}">跳转到电影详情页，采用明传参数的方式</a></p>
 <p><a href="{% url 'movie_detail_2' %}?movie_id=2">跳转到电影详情页，采用明传参数的方式</a></p>
+
+<p>-------接下来测试autoescape自动转义标签的使用-------</p>
+{#'自动转义标签的使用': "<a href='http://www.baidu.com'>测试网页百度</a>"#}
+<p>没有关闭自动转义标签，如下：</p>
+{{ 自动转义标签的使用 }}
+<p>关闭自动转义标签，如下：</p>
+{% autoescape off %}
+    {{ 自动转义标签的使用 }}
+{% endautoescape %}
+
 </body>
 </html>

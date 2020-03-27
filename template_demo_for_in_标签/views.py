@@ -22,7 +22,8 @@ context = {
         '第二个键': '2',
         '第三个键': '3',
     },
-    'testwith': 150515
+    'testwith': 150515,
+    '自动转义标签的使用': "<a href='http://www.baidu.com'>测试网页百度</a>"
 }
 
 
@@ -42,3 +43,4 @@ def movie_detail(request, movie_id, category_id):
 def movice_detail_2(request):
     id = request.GET.get('movie_id')
     return HttpResponse("您的电影id是{x}".format(x=id))
+

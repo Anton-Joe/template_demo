@@ -23,7 +23,8 @@ context = {
         '第三个键': '3',
     },
     'testwith': 150515,
-    '自动转义标签的使用': "<a href='http://www.baidu.com'>测试网页百度</a>"
+    '自动转义标签的使用': "<a href='http://www.baidu.com'>测试网页百度</a>",
+    'verbatim标签测试': '参数的值为叶敬轩'
 }
 
 

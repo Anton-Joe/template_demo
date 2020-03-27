@@ -22,5 +22,7 @@ urlpatterns = [
     path('', views.index),
     path('movie', views.movie, name='movie'),
     path('movie/detail/<movie_id>/<category_id>', views.movie_detail, name='movie_detail'),
-    path('movie/detail2', views.movice_detail_2, name='movie_detail_2')
+    path('movie/detail2', views.movice_detail_2, name='movie_detail_2'),
+    path('cut', views.cut_view, name='cut_view'),
+    path('add', views.add_view, name='add_view')
 ]

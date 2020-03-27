@@ -45,3 +45,13 @@ def movice_detail_2(request):
     id = request.GET.get('movie_id')
     return HttpResponse("您的电影id是{x}".format(x=id))
 
+
+def cut_view(request):
+    return render(request, 'cut.html')
+
+
+def add_view(request):
+    context2 = {
+        'value1': '100'
+    }
+    return render(request, 'add.html', context=context2)

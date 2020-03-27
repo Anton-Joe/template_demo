@@ -25,5 +25,6 @@ urlpatterns = [
     path('movie/detail2', views.movice_detail_2, name='movie_detail_2'),
     path('cut', views.cut_view, name='cut_view'),
     path('add', views.add_view, name='add_view'),
-    path('date', views.date_view, name='date_view')
+    path('date', views.date_view, name='date_view'),
+    path('default_view', views.default_view, name='default_view')
 ]

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>此时参数为value1，value1有值=50</p>
+{{ value1|default:'500' }}
+<p>此时参数为value2，value1无值，将显示default过滤器设置的值=noting</p>
+{{ value2|default:'nothing' }}
+<p></p>
+</body>
+</html>

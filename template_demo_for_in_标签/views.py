@@ -64,3 +64,10 @@ def date_view(request):
     }
     return render(request, 'date.html', context=context)
 
+
+def default_view(request):
+    context = {
+        'value1': '50',
+        'value2': ''
+    }
+    return render(request, 'default.html', context=context)

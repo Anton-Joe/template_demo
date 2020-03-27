@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from datetime import datetime
 
 context = {
     'Books': [
@@ -55,3 +56,11 @@ def add_view(request):
         'value1': '100'
     }
     return render(request, 'add.html', context=context2)
+
+
+def date_view(request):
+    context = {
+        'today': datetime.now()
+    }
+    return render(request, 'date.html', context=context)
+

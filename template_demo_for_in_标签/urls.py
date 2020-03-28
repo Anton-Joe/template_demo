@@ -29,5 +29,6 @@ urlpatterns = [
     path('date', views.date_view, name='date_view'),
     path('default_view', views.default_view, name='default_view'),
     path('car', cviews.index, name='car_index'),
-    path('includeapp', include('includeApp.urls'))
+    path('includeapp', include('includeApp.urls')),
+    path('extendapp', include('extend_demo_app.urls'))
 ]

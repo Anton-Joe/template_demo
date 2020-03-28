@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<header>
+    <ul>
+        <li><a href="{% url 'extend_demo:extend_demo_index' %}">extend_demo的首页</a></li>
+        <li><a href="{% url 'extend_demo:extend_demo_test' %}">extend_demo的测试页</a></li>
+    </ul>
+</header>
+<div class="content">
+   {% block content %}
+
+   {% endblock %}
+</div>
+
+<footer>我是footer</footer>
+</body>
+</html>

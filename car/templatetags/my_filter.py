@@ -13,6 +13,6 @@ register.filter('my_first_filter_name', my_first_filter)
 
 
 # 另外一种写法：
-# @register.filter
+# @register.filter 或者 @register.filter(my_first_filter_name)
 # def my_first_filter(value, word):
 #     return value + word

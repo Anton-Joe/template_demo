@@ -15,8 +15,9 @@ Including another URLconf
 """
 
 from django.urls import path
+from django.urls import include
 from . import views
-from car import  views as cviews
+from car import views as cviews
 
 urlpatterns = [
     path('', views.index),
@@ -27,5 +28,6 @@ urlpatterns = [
     path('add', views.add_view, name='add_view'),
     path('date', views.date_view, name='date_view'),
     path('default_view', views.default_view, name='default_view'),
-    path('car', cviews.index, name='car_index')
+    path('car', cviews.index, name='car_index'),
+    path('includeapp', include('includeApp.urls'))
 ]
